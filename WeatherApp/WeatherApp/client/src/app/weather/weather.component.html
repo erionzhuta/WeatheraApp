@@ -1,0 +1,15 @@
+<div>
+    <input [(ngModel)]="city" placeholder="Enter city" (change)="changeCity(city)">
+    <select [(ngModel)]="forecastType" (change)="changeForecast(forecastType)">
+      <option value="current">Current Weather</option>
+      <option value="1hour">1 Hour Forecast</option>
+      <option value="2day">2 Day Forecast</option>
+      <option value="7day">7 Day Forecast</option>
+    </select>
+  </div>
+  
+  <!-- Show the weather data here in your preferred format -->
+  <div>
+    <pre>{{weatherData | json}}</pre>
+  </div>
+  
